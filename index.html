@@ -1,251 +1,73 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>로또 번호 추천</title>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2288929383039705"
-    crossorigin="anonymous"></script>
-  <style>
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
-      background:
-        radial-gradient(circle at 10% 10%, #fff7cc 0%, transparent 36%),
-        radial-gradient(circle at 90% 0%, #c8f7ff 0%, transparent 34%),
-        linear-gradient(180deg, #fffdf4 0%, #f6fbff 100%);
-      color:#1f2937;
-    }
-    .wrap{max-width:720px;margin:0 auto;padding:28px 16px;}
-    .card{
-      background:rgba(255,255,255,0.92);
-      border:1px solid #dbeafe;
-      border-radius:18px;
-      padding:20px;
-      box-shadow:0 14px 34px rgba(59,130,246,.12);
-      backdrop-filter:blur(4px);
-    }
-    h1{margin:0 0 8px;font-size:20px;}
-    p{margin:0 0 14px;color:#475569;font-size:13px;line-height:1.5;}
-    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
-    .btn{
-      padding:12px 14px;
-      border-radius:12px;
-      border:1px solid #f59e0b;
-      background:linear-gradient(135deg,#f59e0b 0%,#f97316 100%);
-      color:#fff;
-      cursor:pointer;
-      font-weight:700;
-      box-shadow:0 8px 18px rgba(249,115,22,.28);
-    }
-    .btn:hover{filter:brightness(1.06);}
-    select,input{
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid #bfdbfe;
-      background:#ffffff;
-      color:#111827;
-      outline:none;
-    }
-    select:focus,input:focus{
-      border-color:#60a5fa;
-      box-shadow:0 0 0 3px rgba(96,165,250,.2);
-    }
-    .result{
-      margin-top:14px;
-      padding:14px;
-      border-radius:14px;
-      border:1px solid #dbeafe;
-      background:linear-gradient(180deg,#ffffff 0%,#f0f9ff 100%);
-    }
-    .nums{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
-    .ball{
-      width:48px;height:48px;
-      border-radius:999px;
-      border:1px solid #fdba74;
-      background:linear-gradient(180deg,#fff7ed 0%,#ffedd5 100%);
-      display:flex;align-items:center;justify-content:center;
-      font-size:18px;font-weight:800;
-      color:#9a3412;
-      user-select:none;
-    }
-    .mini{margin-top:10px;color:#64748b;font-size:12px;line-height:1.4;}
-    .history{
-      margin-top:14px;
-      color:#334155;
-      font-size:12px;
-      line-height:1.6;
-    }
-    .history code{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:2px 6px;color:#1e3a8a;}
-    .section{
-      margin-top:16px;
-      padding-top:16px;
-      border-top:1px dashed #bfdbfe;
-    }
-    .contact-title{
-      margin:0 0 6px;
-      font-size:18px;
-      font-weight:800;
-    }
-    .contact-help{
-      margin:0 0 12px;
-      color:#475569;
-      font-size:13px;
-    }
-    .contact-form{
-      display:grid;
-      gap:10px;
-    }
-    .contact-form input,
-    .contact-form textarea{
-      width:100%;
-      box-sizing:border-box;
-      padding:12px;
-      border-radius:12px;
-      border:1px solid #bfdbfe;
-      background:#ffffff;
-      color:#111827;
-      outline:none;
-    }
-    .contact-form textarea{
-      min-height:120px;
-      resize:vertical;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus{
-      border-color:#60a5fa;
-      box-shadow:0 0 0 3px rgba(96,165,250,.2);
-    }
-  </style>
+  <title>생활밀착 가이드 | 광고보다 먼저, 신뢰할 수 있는 정보</title>
+  <meta name="description" content="예산관리, 건강 루틴, 집중 습관을 다루는 생활밀착형 정보 사이트입니다. 실제로 적용 가능한 팁과 체크리스트를 제공합니다." />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2288929383039705" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>로또 번호 추천기</h1>
-      <p>버튼 누르면 1~45에서 중복 없이 6개 뽑아줘요. (당첨 보장은 없음 😅)</p>
+  <div class="site">
+    <header class="header">
+      <a class="brand" href="index.html">생활밀착 가이드</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html">홈</a>
+        <a href="about.html">소개</a>
+        <a href="contact.html">문의</a>
+        <a href="privacy.html">개인정보처리방침</a>
+      </nav>
+    </header>
 
-      <div class="row">
-        <label>
-          세트 개수&nbsp;
-          <select id="count">
-            <option value="1">1세트</option>
-            <option value="2">2세트</option>
-            <option value="3">3세트</option>
-            <option value="5">5세트</option>
-          </select>
-        </label>
-
-        <label>
-          고정할 숫자(선택)&nbsp;
-          <input id="fixed" type="text" placeholder="예: 7, 13" />
-        </label>
-
-        <button class="btn" id="btn">번호 추천</button>
+    <section class="hero">
+      <h1>실제로 도움 되는 생활 정보만 정리합니다</h1>
+      <p>광고를 보기 전에, 먼저 콘텐츠가 가치 있어야 한다고 생각합니다. 이 사이트는 일상에서 바로 써먹을 수 있는 실전형 가이드를 꾸준히 발행합니다.</p>
+      <div class="badges">
+        <span class="badge">직접 작성 콘텐츠</span>
+        <span class="badge">과장 없는 정보</span>
+        <span class="badge">모바일 최적화</span>
       </div>
+    </section>
 
-      <div id="out" class="result" aria-live="polite">
-        <b>결과</b>
-        <div class="nums" id="balls"></div>
-        <div class="mini" id="note"></div>
+    <section class="section">
+      <h2>최신 가이드</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>월급 관리 루틴: 지출 통제부터 비상금까지</h3>
+          <div class="meta">업데이트: 2026-02-14 · 카테고리: 돈관리</div>
+          <p>수입이 늘지 않아도 재정이 안정되는 루틴을 단계별로 정리했습니다.</p>
+          <a class="cta" href="article-budget.html">자세히 읽기</a>
+        </article>
+        <article class="card">
+          <h3>집에서 시작하는 20분 운동 루틴</h3>
+          <div class="meta">업데이트: 2026-02-14 · 카테고리: 건강</div>
+          <p>장비 없이도 가능한 현실적인 초보 루틴과 유지 방법을 소개합니다.</p>
+          <a class="cta" href="article-workout.html">자세히 읽기</a>
+        </article>
+        <article class="card">
+          <h3>집중력 끌어올리는 하루 설계법</h3>
+          <div class="meta">업데이트: 2026-02-14 · 카테고리: 생산성</div>
+          <p>일을 많이 하는 방법이 아니라, 중요한 일을 끝내는 방법에 집중합니다.</p>
+          <a class="cta" href="article-focus.html">자세히 읽기</a>
+        </article>
       </div>
+    </section>
 
-      <div class="history" id="history"></div>
+    <section class="section">
+      <h2>운영 원칙</h2>
+      <p class="note">1) 본문 중심의 고유 콘텐츠를 발행합니다. 2) 출처가 필요한 정보는 출처를 표기합니다. 3) 과장된 수익/효과 보장은 하지 않습니다.</p>
+      <p class="note">콘텐츠/광고 운영 관련 문의는 <a href="contact.html">문의 페이지</a>에서 받습니다.</p>
+    </section>
 
-      <div class="section">
-        <h2 class="contact-title">Partnership Inquiry</h2>
-        <p class="contact-help">Send a message for collaboration or business proposals.</p>
-        <form class="contact-form" action="https://formspree.io/f/mreaprew" method="POST">
-          <input type="hidden" name="_subject" value="New partnership inquiry from test-product-builder" />
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Email address" required />
-          <input type="text" name="company" placeholder="Company (optional)" />
-          <textarea name="message" placeholder="Tell us about your proposal" required></textarea>
-          <button class="btn" type="submit">Send Inquiry</button>
-        </form>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="about.html">사이트 소개</a>
+        <a href="contact.html">문의하기</a>
+        <a href="privacy.html">개인정보처리방침</a>
       </div>
-    </div>
+      <p>© 2026 생활밀착 가이드. All rights reserved.</p>
+    </footer>
   </div>
-
-<script>
-  const btn = document.getElementById("btn");
-  const countSel = document.getElementById("count");
-  const fixedInput = document.getElementById("fixed");
-  const balls = document.getElementById("balls");
-  const note = document.getElementById("note");
-  const history = document.getElementById("history");
-
-  function parseFixed() {
-    const raw = fixedInput.value.trim();
-    if (!raw) return [];
-    const parts = raw.split(/[\s,]+/).filter(Boolean);
-    const nums = [];
-    for (const p of parts) {
-      const n = Number(p);
-      if (!Number.isInteger(n) || n < 1 || n > 45) continue;
-      if (!nums.includes(n)) nums.push(n);
-    }
-    return nums.slice(0, 6); // 최대 6개까지만
-  }
-
-  function pickOneSet(fixedNums) {
-    // fixedNums 포함해서 6개 만들기
-    const set = new Set(fixedNums);
-    while (set.size < 6) {
-      const n = Math.floor(Math.random() * 45) + 1;
-      set.add(n);
-    }
-    return Array.from(set).sort((a, b) => a - b);
-  }
-
-  function renderSets(sets) {
-    balls.innerHTML = "";
-    history.innerHTML = "";
-
-    // 최신 결과(첫 세트)만 공 모양으로 보여주고,
-    // 여러 세트는 아래에 텍스트로 같이 출력
-    const first = sets[0] || [];
-    first.forEach(n => {
-      const el = document.createElement("div");
-      el.className = "ball";
-      el.textContent = n;
-      balls.appendChild(el);
-    });
-
-    if (sets.length > 1) {
-      let html = "<b>추가 세트</b><br/>";
-      sets.forEach((arr, idx) => {
-        html += `${idx + 1}세트: <code>${arr.join(", ")}</code><br/>`;
-      });
-      history.innerHTML = html;
-    } else {
-      history.innerHTML = `<b>1세트</b><br/><code>${first.join(", ")}</code>`;
-    }
-  }
-
-  btn.addEventListener("click", () => {
-    const fixedNums = parseFixed();
-    const c = Number(countSel.value) || 1;
-
-    if (fixedNums.length > 6) {
-      note.textContent = "고정 숫자는 최대 6개까지 가능해요.";
-      return;
-    }
-
-    const sets = [];
-    for (let i = 0; i < c; i++) {
-      sets.push(pickOneSet(fixedNums));
-    }
-
-    renderSets(sets);
-
-    note.textContent =
-      fixedNums.length
-        ? `고정 숫자: ${fixedNums.join(", ")} 포함해서 추천했어요.`
-        : `랜덤으로 추천했어요.`;
-  });
-
-  // 첫 로드 시 기본 1번 추천
-  btn.click();
-</script>
 </body>
 </html>
